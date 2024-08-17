@@ -1,24 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
-import logo from "../assets/logo.png"
-import auth from "../assets/auth.svg"
+import logo from "../assets/logo.png";
+import auth from "../assets/auth.svg";
 
 function RegistrationForm() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-5xl flex">
-        <div className="w-1/2 p-8 flex flex-col">
+      <div className="bg-white rounded-lg shadow-lg w-full max-w-5xl flex flex-col lg:flex-row">
+        <div className="lg:w-1/2 p-8 flex flex-col items-center lg:items-start">
           <img src={logo} alt="Logo" className="h-8 self-start mb-8" />
           <img
             src={auth}
             alt="Authentication illustration"
-            className="flex-grow object-contain"
+            className="flex-grow object-contain max-w-xs lg:max-w-full"
           />
         </div>
-        <div className="w-1/2 p-8">
-          <h1 className="text-3xl font-bold mb-2">MARHABAN (WELCOME) !</h1>
-          <p className="text-gray-500 mb-6">Register your account</p>
+        <div className="lg:w-1/2 p-8">
+          <h1 className="text-3xl font-bold mb-2 text-center lg:text-left">
+            MARHABAN (WELCOME) !
+          </h1>
+          <p className="text-gray-500 mb-6 text-center lg:text-left">
+            Register your account
+          </p>
 
           <form className="space-y-4">
             <div>
