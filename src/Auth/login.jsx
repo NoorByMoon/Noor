@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import logo from "../assets/logo.png";
@@ -75,10 +76,11 @@ function Login() {
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700"
               >
-                {passwordError && (
-                  <p className="text-red-500 text-sm">{passwordError}</p>
-                )}
+                Password
               </label>
+              {passwordError && (
+                <p className="text-red-500 text-sm">{passwordError}</p>
+              )}
               <div className="relative">
                 <input
                   type={visible ? "text" : "password"}
@@ -107,6 +109,7 @@ function Login() {
                 </div>
               </div>
             </div>
+
             <div className=" ">
               <input
                 type="checkbox"
@@ -114,14 +117,18 @@ function Login() {
                 className="align-middle"
               />
               <label htmlFor="remember_me" className="  text-gray-600 pl-2 ">
-                remember me
+                Remember me
               </label>
                
             </div>
             <div className="flex justify-end">
-              <a href="" className="text-sm text-blue-600 hover:underline">
+              <Link
+                to="/Forget-Password"
+                className="text-sm text-blue-600 hover:underline"
+              >
                 Forgot password?
-              </a>
+              </Link>
+        
             </div>
             <button
               type="submit"
@@ -136,8 +143,12 @@ function Login() {
               <FcGoogle className="mr-2 h-5 w-5" />
               Continue with Google
             </button>
-            <em className="flex justify-center text-gray-600">
-              New Member? <a href="#">signup</a>
+            <em className="flex justify-center text-gray-600 gap-1">
+              New Member?{" "}
+              <a href="#" className="text-blue-500 hover:underline">
+                {" "}
+                Signup
+              </a>
             </em>
           </form>
         </div>
