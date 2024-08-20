@@ -28,8 +28,8 @@ const ForgetPassword = () => {
     }
 
     // Simulate API call and validation for the email
-    // console.log("Forgot password request sent for:", email);
-    // alert("A password reset link has been sent to your email.");
+    console.log("Forgot password request sent for:", email);
+    alert("A password reset link has been sent to your email.");
 
     // Redirect to the Reset Password page
     navigate("/reset-password", { state: { email } });
@@ -37,12 +37,12 @@ const ForgetPassword = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 to-blue-300">
-      <div className="max-w-4xl w-full flex bg-white">
+      <div className="max-w-4xl w-full flex bg-white  flex-col sm:flex-row">
         <div className="sm:w-1/2 p-5 flex flex-col items-start sm:items-center">
           <img
             src={logo}
             alt="Logo"
-            className="h-8 self-start mb-8 max-w-xs sm:max-w-full"
+            className="h-8 self-start mb-5 max-w-xs sm:max-w-full"
           />
           <img
             src={auth}
