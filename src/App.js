@@ -1,11 +1,13 @@
 import React from "react";
 // import RegistrationForm from "./Auth/RegistrationForm";
-import LandingPage from "./LandingPage"
+// import LandingPage from "./LandingPage"
+import Dashboard from "./Dashboard"
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
+      <Dashboard/>
+      {/* <LandingPage/> */}
       {/* <RegistrationForm /> */}
     </div>
   );
