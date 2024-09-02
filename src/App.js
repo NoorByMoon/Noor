@@ -6,11 +6,14 @@ import ResetPassword from "./Auth/ResetPassword";
 import RegistrationForm from "./Auth/RegistrationForm";
 import LandingPage from "./LandingPage";
 import Dashboard from "./Dashboard";
+import Footer from "./Components/Shared/Footer";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
     <BrowserRouter className="App">
       <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/Sign-In" element={<Login />} />
         <Route path="/Forget-Password" element={<ForgetPassword />} />
         <Route path="/Reset-Password" element={<ResetPassword />} />
@@ -18,6 +21,7 @@ function App() {
         <Route path="/Landing-page" element={<LandingPage />} />
         <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

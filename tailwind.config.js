@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -5,7 +6,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         // heroBg: "url('/src/assets/heroBg.svg')",\
-        authBg:"url('/src/assets/auth.svg')",
+        // GetInTouch:"url('/src/assets/getintouch.png')",
+        getintouch: "url('/src/assets/getInTouch.png')",
+        waitList:"url('/src/assets/waitList.png')",
       },
     },
   },
