@@ -37,7 +37,7 @@ function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center p-2 sm:p-4">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-5xl flex flex-col sm:flex-row">
-        <div className="sm:w-1/2 p-8 flex flex-col items-start r">
+        <div className="sm:w-1/2 p-8 flex flex-col items-start ">
           <Link to="/" className="">
             <img
               src={logo}
