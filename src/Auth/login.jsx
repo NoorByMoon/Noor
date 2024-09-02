@@ -50,7 +50,7 @@ function Login() {
           />
         </div>
         <div className="sm:w-1/2 p-5 sm:p-8 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-2">MARHABAN (WELCOME)!</h1>
+          <h1 className="text-3xl font-bold mb-2 text-center sm:text-start ">MARHABAN (WELCOME)!</h1>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
@@ -145,7 +145,7 @@ function Login() {
             </button>
             <em className="flex justify-center text-gray-600 gap-1">
               New Member?{" "}
-              <a href="#" className="text-blue-500 hover:underline">
+              <a href="/Sign-Up" className="text-blue-500 hover:underline">
                 {" "}
                 Signup
               </a>
