@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+import logo from '../../assets/logo (2).png'
+
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,7 +65,7 @@ function Header() {
         </nav>
 
         <button className="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-full">
-          Sign Up
+          <Link to='/Sign-Up'>Sign Up</Link>
         </button>
       </div>
 

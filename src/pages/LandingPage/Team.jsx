@@ -1,10 +1,11 @@
-import React from 'react'
-
-import image from "../../assets/img.png"
-import MeetTheTeam from './MeetTheTeam';
+import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import image from "../../assets/img.png";
+import MeetTheTeam from "./MeetTheTeam";
 
 const Team = () => {
-
   const Teams = [
     {
       image: image,
@@ -43,18 +44,33 @@ const Team = () => {
     },
   ];
 
+  // Slick carousel settings with autoplay
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true, 
+    autoplaySpeed: 2000, 
+  };
+
   return (
-    <div className="bg-[#FFFF] px-10 py-16   flex flex-col items-center justify-center ">
+    <div className="container mx-auto px-4 py-16 ">
       <h1 className="text-center text-[#316097] mb-7 font-bold text-3xl uppercase">
         meet the team
       </h1>
-      <div className=" flex gap-5 justify-center flex-col  lg:flex-row   ">
-        {Teams.map((Team, i) => (
-          <MeetTheTeam key={i} {...Team} />
+      <Slider {...settings}>
+        {Teams.map((team, i) => (
+          <div
+            key={i}
+            className="flex gap-5 justify-center flex-col lg:flex-row"
+          >
+            <MeetTheTeam {...team} />
+          </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
-}
+};
 
-export default Team
+export default Team;

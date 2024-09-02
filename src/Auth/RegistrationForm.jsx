@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo (2).png";
 import auth from "../assets/auth.svg";
 
 function RegistrationForm() {
@@ -155,7 +155,7 @@ function RegistrationForm() {
           <p className="mt-4 text-center text-sm text-gray-600">
             Already have an account?{" "}
             <a
-              href="/"
+              href="/Sign-In"
               className="font-medium text-blue-600 hover:text-blue-500"
             >
               Sign In

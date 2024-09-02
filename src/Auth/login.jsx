@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo (2).png";
 import auth from "../assets/auth.svg";
 
 function Login() {
@@ -37,12 +37,14 @@ function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center p-2 sm:p-4">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-5xl flex flex-col sm:flex-row">
-        <div className="sm:w-1/2 p-8 flex flex-col items-start sm:items-center">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-8 self-start mb-8 max-w-xs sm:max-w-full"
-          />
+        <div className="sm:w-1/2 p-8 flex flex-col items-start r">
+          <Link to="/" className="">
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-8 self-start mb-8 max-w-xs sm:max-w-full"
+            />
+          </Link>
           <img
             src={auth}
             alt="Authentication illustration"
@@ -50,7 +52,9 @@ function Login() {
           />
         </div>
         <div className="sm:w-1/2 p-5 sm:p-8 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-2 text-center sm:text-start ">MARHABAN (WELCOME)!</h1>
+          <h1 className="text-3xl font-bold mb-2 text-center sm:text-start ">
+            MARHABAN (WELCOME)!
+          </h1>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
@@ -128,7 +132,6 @@ function Login() {
               >
                 Forgot password?
               </Link>
-        
             </div>
             <button
               type="submit"

@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 const MeetTheTeam = ({ image, name, role, description }) => {
   return (
     <div className="">
-      <div className="flex flex-col justify-center items-center gap-4 p-4 max-w-3xl  shadow-lg border border-red-400 ">
+      <div className="flex flex-col justify-center items-center gap-4 p-4 max-w-3xl   ">
         <div>
           <img src={image} alt="" className="h-44 w-44 rounded-full mx-auto " />
         </div>

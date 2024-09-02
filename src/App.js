@@ -1,24 +1,26 @@
 import React from "react";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Auth/Login";
-import ForgetPassword from "./Auth/forgetPassword";
-import ResetPassword from "./Auth/ResetPassword";
+import ForgetPassword from "./Auth/ForgetPassword";
 import RegistrationForm from "./Auth/RegistrationForm";
-import LandingPage from "./LandingPage";
+import ResetPassword from "./Auth/ResetPassword";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Footer from "./Components/Shared/Footer";
-import HomePage from "./pages/HomePage/HomePage";
+import LandingPage from "./pages/LandingPage/LandingPage";
+// import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
   return (
     <BrowserRouter className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/Sign-In" element={<Login />} />
         <Route path="/Forget-Password" element={<ForgetPassword />} />
         <Route path="/Reset-Password" element={<ResetPassword />} />
         <Route path="/Sign-Up" element={<RegistrationForm />} />
-        <Route path="/Landing-page" element={<LandingPage />} />
+        {/* <Route path="/Landing-page" element={<LandingPage />} /> */}
         <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo (2).png";
 import auth from "../assets/auth.svg";
 
 const ForgetPassword = () => {
@@ -38,12 +38,14 @@ const ForgetPassword = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 to-blue-300">
       <div className="max-w-4xl w-full flex bg-white  flex-col sm:flex-row">
-        <div className="sm:w-1/2 p-5 flex flex-col items-start sm:items-center">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-8 self-start mb-5 max-w-xs sm:max-w-full"
-          />
+        <div className="sm:w-1/2 p-5 flex flex-col items-start">
+          <Link to='/'>
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-8 self-start mb-5 max-w-xs sm:max-w-full"
+            />
+          </Link>
           <img
             src={auth}
             alt="Authentication illustration"
@@ -83,7 +85,7 @@ const ForgetPassword = () => {
           </form>
           <p className="text-center text-gray-500 mt-4">
             Remember your password?{" "}
-            <Link to="/" className="text-blue-500 hover:underline">
+            <Link to="/Sign-In" className="text-blue-500 hover:underline">
               Login
             </Link>
           </p>

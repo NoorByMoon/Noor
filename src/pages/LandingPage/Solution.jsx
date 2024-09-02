@@ -11,8 +11,8 @@ const Solution = () => {
       { Image: solution4, title: "Basic islamic Etiquettes" },
     ];
   return (
-    <section className=" bg-[#EDF4FC] flex flex-col items-center justify-center px-8 py-14 gap-8">
-      <div className="text-center space-y-4">
+    <section className="container mx-auto px-4 py-16">
+            <div className="text-center space-y-4">
         <h1 className="text-3xl font-bold text-[#316097]">Our Solution</h1>
         <h2 className="text-xl">Noor has amazing solutions created for beginners</h2>
       </div>
@@ -20,7 +20,7 @@ const Solution = () => {
         {solutions.map((solution, index) => (
           <div
             key={index}
-            className="bg-white px-6 py-6 lg:py-4 rounded-xl shadow-lg flex flex-col items-center gap-5 max-w-1/4 w-full"
+            className="container mx-auto px-6 py-6 lg:py-4 rounded-xl shadow-lg flex flex-col items-center gap-5 max-w-1/4 w-full"
           >
             <img src={solution.Image} alt="" className="h-3/5 mb-2 lg:mb-4" />
             <p className="uppercase  text-center">{solution.title}</p>
@@ -31,6 +31,7 @@ const Solution = () => {
         ))}
       </div>
     </section>
+ 
   );
 }
 

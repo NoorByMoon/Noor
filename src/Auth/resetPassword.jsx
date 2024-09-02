@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import PasswordInput from "../Component/Shared/PasswordInput";
-import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+import PasswordInput from '../Components/Shared/PasswordInput'
+import logo from "../assets/logo (2).png";
 import auth from "../assets/auth.svg";
 
 // Modal Component
@@ -76,12 +77,14 @@ const ResetPassword = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-200 to-blue-300 ">
       <div className="bg-white p-2 sm:p-5 rounded shadow-md w-full max-w-4xl  flex flex-col sm:flex-row">
-        <div className="sm:w-1/2 p-2 flex flex-col items-start sm:items-center ">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-8 self-start mb-4 max-w-xs sm:max-w-full"
-          />
+        <div className="sm:w-1/2 p-2 flex flex-col items-start  ">
+          <Link to='/' >
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-8 self-start mb-4 max-w-xs sm:max-w-full"
+            />
+          </Link>
           <img
             src={auth}
             alt="Authentication illustration"

@@ -1,6 +1,7 @@
 // components/KnowledgeSection.js
 import React from "react";
-import About from "../assets/about (2).png";
+import About from '../../assets/about (2).png'
+
 
 function AboutUs() {
   return (

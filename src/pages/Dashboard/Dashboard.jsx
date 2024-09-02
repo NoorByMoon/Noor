@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Bell, ChevronRight, LogOut } from 'lucide-react';
-import logo from "./assets/logo.png";
+import logo from '../../assets/logo.png'
+
+
 
 // Sidebar Component
 const Sidebar = () => (
