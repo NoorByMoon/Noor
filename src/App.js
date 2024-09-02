@@ -5,7 +5,7 @@ import ForgetPassword from "./Auth/forgetPassword";
 import ResetPassword from "./Auth/ResetPassword";
 import RegistrationForm from "./Auth/RegistrationForm";
 import LandingPage from "./LandingPage";
-import Dashboard from "./Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Footer from "./Components/Shared/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 
