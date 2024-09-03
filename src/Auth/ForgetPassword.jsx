@@ -39,7 +39,7 @@ const ForgetPassword = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 to-blue-300">
       <div className="max-w-4xl w-full flex bg-white  flex-col sm:flex-row">
         <div className="sm:w-1/2 p-5 flex flex-col items-start">
-          <Link to='/'>
+          <Link to="/">
             <img
               src={logo}
               alt="Logo"
