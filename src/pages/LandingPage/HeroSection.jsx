@@ -5,7 +5,7 @@ import hero from "../../assets/hero.svg"
 function HeroSection() {
   return (
     <section className="container mx-auto px-4 py-10 lg:py-16 flex flex-col-reverse lg:flex-row items-center">
-      <div className="w-full lg::w-1/2">
+      <div className="w-full lg:w-1/2">
         <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
           SIMPLIFIED ISLAMIC TEACHINGS FOR KIDS, ADULTS, AND REVERTS
         </h1>
