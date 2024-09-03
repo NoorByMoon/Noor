@@ -39,26 +39,26 @@ function Header() {
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li>
-              <a href="./about" className="text-gray-600 hover:text-blue-600">
+              <a href="#about" className="text-gray-600 hover:text-blue-600">
                 About
               </a>
             </li>
             <li>
               <a
-                href="./features"
+                href="#features"
                 className="text-gray-600 hover:text-blue-600"
               >
                 Features
               </a>
             </li>
             <li>
-              <a href="team" className="text-gray-600 hover:text-blue-600">
+              <a href="#team" className="text-gray-600 hover:text-blue-600">
                 Team
               </a>
             </li>
             <li>
-              <a href="faq" className="text-gray-600 hover:text-blue-600">
-                FAQ
+              <a href="/Dashboard" className="text-gray-600 hover:text-blue-600">
+                Dashboard
               </a>
             </li>
           </ul>
@@ -75,26 +75,26 @@ function Header() {
           <nav>
             <ul className="flex flex-col space-y-4">
               <li>
-                <a href="./about" className="text-gray-600 hover:text-blue-600">
+                <a href="#about" className="text-gray-600 hover:text-blue-600">
                   About
                 </a>
               </li>
               <li>
                 <a
-                  href="./features"
+                  href="#features"
                   className="text-gray-600 hover:text-blue-600"
                 >
                   Features
                 </a>
               </li>
               <li>
-                <a href="team" className="text-gray-600 hover:text-blue-600">
+                <a href="#team" className="text-gray-600 hover:text-blue-600">
                   Team
                 </a>
               </li>
               <li>
-                <a href="faq" className="text-gray-600 hover:text-blue-600">
-                  FAQ
+                <a href="/Dashboard" className="text-gray-600 hover:text-blue-600">
+                  Dashboard
                 </a>
               </li>
             </ul>

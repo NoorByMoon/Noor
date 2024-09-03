@@ -11,40 +11,30 @@ const Team = () => {
       image: image,
       name: "Aisha Mudathir",
       role: "Product Manager",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur ",
+  
     },
     {
       image: image,
       name: "Khadijah Kolapo",
       role: "Product Designer",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur ",
     },
     {
       image: image,
       name: "Hind AbdulRasheed",
       role: "Front-End Developer",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur ",
     },
     {
       image: image,
       name: "Sekinat Bashir ",
       role: "Front-End Developer",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur",
     },
     {
       image: image,
       name: "Halimah Ajani",
       role: "FullStack Developer ",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur",
     },
   ];
 
-  // Slick carousel settings with autoplay
   const settings = {
     infinite: true,
     speed: 500,
@@ -55,7 +45,7 @@ const Team = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16 ">
+    <div className="container mx-auto px-4 py-16 " id="team">
       <h1 className="text-center text-[#316097] mb-7 font-bold text-3xl uppercase">
         meet the team
       </h1>

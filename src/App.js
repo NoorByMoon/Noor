@@ -7,9 +7,8 @@ import ForgetPassword from "./Auth/ForgetPassword";
 import RegistrationForm from "./Auth/RegistrationForm";
 import ResetPassword from "./Auth/ResetPassword";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Footer from "./Components/Shared/Footer";
 import LandingPage from "./pages/LandingPage/LandingPage";
-// import LandingPage from "./pages/LandingPage/LandingPage";
+
 
 function App() {
   return (
@@ -20,10 +19,9 @@ function App() {
         <Route path="/Forget-Password" element={<ForgetPassword />} />
         <Route path="/Reset-Password" element={<ResetPassword />} />
         <Route path="/Sign-Up" element={<RegistrationForm />} />
-        {/* <Route path="/Landing-page" element={<LandingPage />} /> */}
         <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
-      <Footer />
+
     </BrowserRouter>
   );
 }

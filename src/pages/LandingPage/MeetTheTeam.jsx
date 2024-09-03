@@ -1,25 +1,25 @@
 import React from 'react'
+import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { RiTwitterXFill } from "react-icons/ri";
-import { FaInstagram } from "react-icons/fa";
 
 
-const MeetTheTeam = ({ image, name, role, description }) => {
+
+const MeetTheTeam = ({ image, name, role, link }) => {
   return (
-    <div className="">
-      <div className="flex flex-col justify-center items-center gap-4 p-4 max-w-3xl   ">
-        <div>
-          <img src={image} alt="" className="h-44 w-44 rounded-full mx-auto " />
-        </div>
-        <div className="text-center space-y-3    text-[#316097]">
-          <h1 className="font-semibold text-lg uppercase">{name}</h1>
-          <h6 className="text-base text-red-400">{role}</h6>
-          <p>{description}</p>
-          <div className="flex items-center justify-center gap-4 text-[#316097] text-2xl  ">
-            <RiTwitterXFill />
-            <FaInstagram />
-            <IoLogoLinkedin />
-          </div>
+    <div className="flex flex-col justify-center items-center gap-4 p-4   ">
+      <div>
+        <img src={image} alt="" className="h-44 w-44 rounded-full mx-auto " />
+      </div>
+      <div className="text-center space-y-3    text-[#316097]">
+        <h1 className="font-semibold text-lg uppercase">{name}</h1>
+        <h6 className="text-base text-red-400">{role}</h6>
+        <div className="flex justify-center items-center gap-4">
+          {/* <a href={link}>
+            {" "}
+            <IoLogoLinkedin color="#316097" size={20} />
+          </a> */}
+          <IoLogoLinkedin color="#316097" size={20} />
+          <MdOutlineMailOutline color="#316097" size={20} />
         </div>
       </div>
     </div>

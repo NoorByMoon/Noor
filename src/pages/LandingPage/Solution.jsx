@@ -11,7 +11,7 @@ const Solution = () => {
       { Image: solution4, title: "Basic islamic Etiquettes" },
     ];
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-10 lg:py-16">
             <div className="text-center space-y-4">
         <h1 className="text-3xl font-bold text-[#316097]">Our Solution</h1>
         <h2 className="text-xl">Noor has amazing solutions created for beginners</h2>
@@ -22,7 +22,7 @@ const Solution = () => {
             key={index}
             className="container mx-auto px-6 py-6 lg:py-4 rounded-xl shadow-lg flex flex-col items-center gap-5 max-w-1/4 w-full"
           >
-            <img src={solution.Image} alt="" className="h-3/5 mb-2 lg:mb-4" />
+            <img src={solution.Image} alt="" className="lg:h-3/5 h-1/6 mb-2 lg:mb-4" />
             <p className="uppercase  text-center">{solution.title}</p>
             <button className=" bg-[#316097] rounded-lg text-white py-2 px-4 ">
               SHOW ME

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { Bell, ChevronRight, LogOut } from 'lucide-react';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo (2).png'
 
 
 
@@ -8,8 +9,9 @@ import logo from '../../assets/logo.png'
 const Sidebar = () => (
   <div className="bg-white p-4 flex flex-col h-full">
     <div className="mb-8">
-            <img src={logo} alt="Logo" className="h-8 self-start mb-8" />
-            
+      <Link to="/">
+        <img src={logo} alt="Logo" className="h-8 self-start mb-8" />
+      </Link>
     </div>
     <nav className="flex-grow">
       <ul className="space-y-4">

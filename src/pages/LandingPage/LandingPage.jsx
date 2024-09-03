@@ -6,6 +6,7 @@ import AboutUs from "./AboutUs";
 import Header from "./Header";
 import Solution from "./Solution";
 import Features from "./Features";
+import Footer from "../../Components/Shared/Footer";
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
         <Solution />
         <Team />
         <Waitlist />
+        <Footer/>
       </main>
     </div>
   );
