@@ -44,10 +44,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <a
-                href="#features"
-                className="text-gray-600 hover:text-blue-600"
-              >
+              <a href="#features" className="text-gray-600 hover:text-blue-600">
                 Features
               </a>
             </li>
@@ -57,7 +54,10 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="/Dashboard" className="text-gray-600 hover:text-blue-600">
+              <a
+                href="/Dashboard"
+                className="text-gray-600 hover:text-blue-600"
+              >
                 Dashboard
               </a>
             </li>
@@ -65,7 +65,7 @@ function Header() {
         </nav>
 
         <button className="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-full">
-          <Link to='/Sign-Up'>Sign Up</Link>
+          <Link to="/Sign-Up">Sign Up</Link>
         </button>
       </div>
 
@@ -93,7 +93,10 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a href="/Dashboard" className="text-gray-600 hover:text-blue-600">
+                <a
+                  href="/Dashboard"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Dashboard
                 </a>
               </li>
