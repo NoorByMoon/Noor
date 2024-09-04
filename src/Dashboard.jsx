@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bell, ChevronRight, LogOut } from "lucide-react";
-import logo from "./assets/about (2).png";
+import logo from "../../assets/about (2).png";
 
 // Sidebar Component
 const Sidebar = () => (
