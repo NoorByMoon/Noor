@@ -1,14 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from '../../assets/logo (2).png'
-
+import { Link, useNavigate } from "react-router-dom";
+import logo from '../../assets/logo (2).png';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleNavigation = (path) => {
+    setMenuOpen(false);
+    navigate(path);
   };
 
   return (
@@ -27,12 +32,21 @@ function Header() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            )}
           </svg>
         </button>
 
@@ -54,10 +68,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <Link
-                to="/Dashboard"
-                className="text-gray-600 hover:text-blue-600"
-              >
+              <Link to="/Dashboard" className="text-gray-600 hover:text-blue-600">
                 Dashboard
               </Link>
             </li>
@@ -71,7 +82,7 @@ function Header() {
 
       {/* Dropdown menu card */}
       {menuOpen && (
-        <div className="md:hidden absolute top-16 left-auto right-0 mx-4 bg-blue-100 shadow-lg rounded-lg p-4 w-36">
+        <div className="md:hidden absolute top-16 right-0 mx-4 bg-blue-100 shadow-lg rounded-lg p-4 w-36">
           <nav>
             <ul className="flex flex-col space-y-4">
               <li>
@@ -80,10 +91,7 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#features"
-                  className="text-gray-600 hover:text-blue-600"
-                >
+                <a href="#features" className="text-gray-600 hover:text-blue-600">
                   Features
                 </a>
               </li>
@@ -93,12 +101,20 @@ function Header() {
                 </a>
               </li>
               <li>
-                <link 
-                  to="/Dashboard"
+                <button
+                  onClick={() => handleNavigation('/Dashboard')}
                   className="text-gray-600 hover:text-blue-600"
                 >
                   Dashboard
-                </link>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation('/Sign-Up')}
+                  className="hidden md:block text-gray-600 hover:text-blue-600"
+                >
+                  Sign Up
+                </button>
               </li>
             </ul>
           </nav>
