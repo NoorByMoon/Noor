@@ -22,7 +22,7 @@ const Solution = () => {
             key={index}
             className="container mx-auto px-6 py-6 lg:py-4 rounded-xl shadow-lg flex flex-col items-center gap-5 max-w-1/4 w-full"
           >
-            <img src={solution.Image} alt="" className="lg:h-3/5 h-1/6 mb-2 lg:mb-4" />
+            <img src={solution.Image} alt="" className="lg:h-3/5 h-96 mb-2 lg:mb-4" />
             <p className="uppercase  text-center">{solution.title}</p>
             <button className=" bg-[#316097] rounded-lg text-white py-2 px-4 ">
               SHOW ME

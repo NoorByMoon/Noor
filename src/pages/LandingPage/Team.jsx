@@ -11,7 +11,6 @@ const Team = () => {
       image: image,
       name: "Aisha Mudathir",
       role: "Product Manager",
-  
     },
     {
       image: image,
@@ -40,21 +39,32 @@ const Team = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true, 
-    autoplaySpeed: 2000, 
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="container mx-auto px-4 py-16 " id="team">
+    <div className="container mx-auto px-4 py-16 overflow-hidden" id="team">
       <h1 className="text-center text-[#316097] mb-7 font-bold text-3xl uppercase">
         meet the team
       </h1>
       <Slider {...settings}>
         {Teams.map((team, i) => (
-          <div
-            key={i}
-            className="flex gap-5 justify-center flex-col lg:flex-row"
-          >
+          <div key={i}>
             <MeetTheTeam {...team} />
           </div>
         ))}

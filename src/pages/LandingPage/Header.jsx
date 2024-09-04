@@ -54,12 +54,12 @@ function Header() {
               </a>
             </li>
             <li>
-              <a
-                href="/Dashboard"
+              <Link
+                to="/Dashboard"
                 className="text-gray-600 hover:text-blue-600"
               >
                 Dashboard
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -93,12 +93,12 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a
-                  href="/Dashboard"
+                <link 
+                  to="/Dashboard"
                   className="text-gray-600 hover:text-blue-600"
                 >
                   Dashboard
-                </a>
+                </link>
               </li>
             </ul>
           </nav>
