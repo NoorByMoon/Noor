@@ -81,6 +81,7 @@ const Sidebar = () => (
   </div>
 );
 
+
 // Header Component
 const Header = ({ user }) => (
   <header className="flex justify-between items-center mb-6">
@@ -97,6 +98,7 @@ const Header = ({ user }) => (
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
+        {/* Search Icon */}
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -106,8 +108,16 @@ const Header = ({ user }) => (
       </svg>
     </div>
     <div className="flex items-center space-x-4 ml-4">
-      <Bell className="h-6 w-6 text-gray-500" />
+      {/* Added Notification Badge */}
+      <div className="relative">
+        <Bell className="h-6 w-6 text-gray-500" />
+        <span className="absolute top-0 right-0 bg-red-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">
+          3
+        </span>
+      </div>
       <img src={user.avatar} alt={user.name} className="w-8 h-8 rounded-full" />
+      {/* Added Upgrade to Premium Button */}
+
     </div>
   </header>
 );
@@ -134,14 +144,15 @@ const Events = ({ events }) => (
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {events.map((event, index) => (
-        <div key={index} className="bg-white p-4 rounded-lg shadow">
+        <div key={index} className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
           <div className="flex justify-between items-center mb-2">
             <span className="text-gray-500">{event.date}</span>
             <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
               {event.attendees}
             </span>
           </div>
-          <h4 className="text-sm font-medium">{event.title}</h4>
+          <h4 className="text-sm font-medium mb-2">{event.title}</h4>
+          <p className="text-gray-600 text-sm">{event.description}</p>
         </div>
       ))}
     </div>
@@ -151,10 +162,10 @@ const Events = ({ events }) => (
 // Courses Component
 const Courses = ({ courses }) => (
   <div className="bg-white p-6 rounded-lg shadow">
-    <h3 className="text-lg font-semibold mb-4">Courses</h3>
+    <h3 className="text-lg font-semibold mb-4">Your Courses</h3>
     <ul className="space-y-2">
       {courses.map((course, index) => (
-        <li key={index} className="flex justify-between items-center">
+        <li key={index} className="flex justify-between items-center hover:bg-gray-50 p-2 rounded">
           <span>{course.name}</span>
           <span className="text-gray-500">{course.progress}%</span>
         </li>
@@ -186,11 +197,13 @@ const Progress = ({ courses }) => (
   </div>
 );
 
-
 // Premium Upgrade Component
 const PremiumUpgrade = () => (
   <div className="bg-gray-900 text-white p-6 rounded-lg mt-6">
     <h3 className="text-xl font-bold mb-2">Upgrade to Premium</h3>
+    <p className="mb-4">
+      Get access to exclusive features and content by upgrading to our premium plan.
+    </p>
     <button className="bg-white text-gray-900 px-4 py-2 rounded-full mt-2">
       Upgrade →
     </button>
@@ -205,9 +218,24 @@ const Dashboard = () => {
   });
 
   const [events] = useState([
-    { date: "Sept 6", attendees: "5", title: "Islamic History Webinar" },
-    { date: "Sept 7", attendees: "10", title: "Quran Recitation Competition" },
-    { date: "Sept 8", attendees: "15", title: "Arabic Language Workshop" },
+    {
+      date: "Sept 6",
+      attendees: "+5",
+      title: "Islamic History Webinar",
+      description: "Join us for an insightful webinar on Islamic history.",
+    },
+    {
+      date: "Sept 7",
+      attendees: "+10",
+      title: "Quran Recitation Competition",
+      description: "Participate in our annual Quran recitation competition.",
+    },
+    {
+      date: "Sept 8",
+      attendees: "+15",
+      title: "Arabic Language Workshop",
+      description: "Enhance your Arabic skills in our interactive workshop.",
+    },
   ]);
 
   const [courses] = useState([
