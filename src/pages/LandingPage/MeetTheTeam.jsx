@@ -4,7 +4,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 
 const MeetTheTeam = ({ image, name, role, link }) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-4 p-4  mx-auto">
+    <div className="flex flex-col justify-center items-center gap-4 p-4  ">
       <div>
         <img
           src={image}

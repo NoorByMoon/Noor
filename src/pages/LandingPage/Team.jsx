@@ -58,7 +58,12 @@ const Team = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16 overflow-hidden" id="team">
+    <div
+      data-aos="zoom--in-up"
+      data-aos-delay="700"
+      className="container mx-auto max-w-screen-lg px-4 py-16 overflow-hidden"
+      id="team"
+    >
       <h1 className="text-center text-[#316097] mb-7 font-bold text-3xl uppercase">
         meet the team
       </h1>

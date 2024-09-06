@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Bell, ChevronRight, LogOut } from 'lucide-react';
-import logo from '../../assets/logo (2).png'
-
-
+import { Bell, ChevronRight, LogOut } from "lucide-react";
+import logo from "../../assets/logo (2).png";
 
 // Sidebar Component
 const Sidebar = () => (
@@ -95,8 +93,19 @@ const Header = ({ user }) => (
         placeholder="Search"
         className="pl-8 pr-4 py-2 rounded-full bg-gray-100"
       />
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5 absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
       </svg>
     </div>
     <div className="flex items-center space-x-4">
@@ -110,7 +119,10 @@ const Header = ({ user }) => (
 const Banner = () => (
   <div className="bg-gray-900 text-white p-6 rounded-lg mb-6">
     <h2 className="text-2xl font-bold mb-2">Effective Learning!</h2>
-    <p className="mb-4">Learning is easy and effective with us. Open the panel and watch your progress and growth in knowledge!</p>
+    <p className="mb-4">
+      Learning is easy and effective with us. Open the panel and watch your
+      progress and growth in knowledge!
+    </p>
   </div>
 );
 
@@ -128,7 +140,9 @@ const Events = ({ events }) => (
         <div key={index} className="bg-white p-4 rounded-lg shadow">
           <div className="flex justify-between items-center mb-2">
             <span className="text-gray-500">{event.date}</span>
-            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">{event.attendees}</span>
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+              {event.attendees}
+            </span>
           </div>
           <h4 className="font-semibold">{event.title}</h4>
           <p className="text-gray-500 text-sm">{event.time}</p>
@@ -183,7 +197,10 @@ const Courses = ({ courses }) => (
     </div>
     <div className="space-y-2">
       {courses.map((course, index) => (
-        <div key={index} className="flex items-center justify-between bg-white p-3 rounded-lg shadow">
+        <div
+          key={index}
+          className="flex items-center justify-between bg-white p-3 rounded-lg shadow"
+        >
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
               {/* Placeholder for course icon */}
@@ -213,27 +230,26 @@ const PremiumUpgrade = () => (
 // Main Dashboard Component
 const Dashboard = () => {
   const [user] = useState({
-    name: 'Kate G.',
-    avatar: '/api/placeholder/32/32',
+    name: "Kate G.",
+    avatar: "/api/placeholder/32/32",
   });
 
   const [events] = useState([
-    { date: '26.02', time: '14:00 - 15:30', title: 'Quran', attendees: '+20' },
-    { date: '02.03', time: '10:00 - 11:30', title: 'Arabic', attendees: '+12' },
-    { date: '07.03', time: '13:00 - 14:30', title: 'Hadith', attendees: '+64' },
+    { date: "26.02", time: "14:00 - 15:30", title: "Quran", attendees: "+20" },
+    { date: "02.03", time: "10:00 - 11:30", title: "Arabic", attendees: "+12" },
+    { date: "07.03", time: "13:00 - 14:30", title: "Hadith", attendees: "+64" },
   ]);
 
   const [courses] = useState([
-    { name: 'Quran', hours: 35 },
-    { name: 'Hadith', hours: 40 },
-    { name: 'Islamic Etiqutte', hours: 25 },
-    
+    { name: "Quran", hours: 35 },
+    { name: "Hadith", hours: 40 },
+    { name: "Islamic Etiqutte", hours: 25 },
   ]);
 
   const [progress] = useState([
-    { name: 'Quran', progress: 37 },
-    { name: 'Hadith', progress: 83 },
-    { name: 'Arabic', progress: 51 },
+    { name: "Quran", progress: 37 },
+    { name: "Hadith", progress: 83 },
+    { name: "Arabic", progress: 51 },
   ]);
 
   return (
