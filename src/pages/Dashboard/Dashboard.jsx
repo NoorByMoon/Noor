@@ -1,5 +1,23 @@
 import React, { useState } from "react";
 import { Bell, ChevronRight, LogOut } from "lucide-react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import logo from "../../assets/logo.png";
 
 // Sidebar Component
@@ -81,7 +99,6 @@ const Sidebar = () => (
   </div>
 );
 
-
 // Header Component
 const Header = ({ user }) => (
   <header className="flex justify-between items-center mb-6">
@@ -117,7 +134,6 @@ const Header = ({ user }) => (
       </div>
       <img src={user.avatar} alt={user.name} className="w-8 h-8 rounded-full" />
       {/* Added Upgrade to Premium Button */}
-
     </div>
   </header>
 );
@@ -144,65 +160,123 @@ const Events = ({ events }) => (
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {events.map((event, index) => (
-        <div key={index} className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-gray-500">{event.date}</span>
-            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-              {event.attendees}
-            </span>
-          </div>
-          <h4 className="text-sm font-medium mb-2">{event.title}</h4>
-          <p className="text-gray-600 text-sm">{event.description}</p>
-        </div>
+        <Card key={index} className="hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">{event.date}</span>
+              <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                {event.attendees}
+              </span>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <h4 className="text-sm font-medium mb-2">{event.title}</h4>
+            <p className="text-gray-600 text-sm">{event.description}</p>
+          </CardContent>
+        </Card>
       ))}
     </div>
   </div>
 );
 
-// Courses Component
-const Courses = ({ courses }) => (
-  <div className="bg-white p-6 rounded-lg shadow">
-    <h3 className="text-lg font-semibold mb-4">Your Courses</h3>
-    <ul className="space-y-2">
-      {courses.map((course, index) => (
-        <li key={index} className="flex justify-between items-center hover:bg-gray-50 p-2 rounded">
-          <span>{course.name}</span>
-          <span className="text-gray-500">{course.progress}%</span>
-        </li>
-      ))}
-    </ul>
-  </div>
+// Updated Progress Component with Graph
+const Progress = ({ courses }) => {
+  const data = courses.map((course, index) => ({
+    name: course.name,
+    progress: course.progress,
+  }));
+
+  return (
+    <div className="mb-6">
+      <h3 className="text-lg font-semibold mb-4">Progress</h3>
+      <Card>
+        <CardContent className="p-6">
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={data}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Line
+                type="monotone"
+                dataKey="progress"
+                stroke="#3b82f6"
+                strokeWidth={2}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+
+// Updated Courses Component
+const Courses = ({ courses, onCourseClick }) => (
+  <Card>
+    <CardHeader>
+      <h3 className="text-lg font-semibold">Your Courses</h3>
+    </CardHeader>
+    <CardContent>
+      <ul className="space-y-2">
+        {courses.map((course, index) => (
+          <li
+            key={index}
+            className="flex justify-between items-center hover:bg-gray-50 p-2 rounded cursor-pointer"
+            onClick={() => onCourseClick(course)}
+          >
+            <span>{course.name}</span>
+            <span className="text-gray-500">{course.progress}%</span>
+          </li>
+        ))}
+      </ul>
+    </CardContent>
+  </Card>
 );
 
-// Progress Component
-const Progress = ({ courses }) => (
-  <div className="mb-6">
-    <h3 className="text-lg font-semibold mb-4">Progress</h3>
-    <div className="bg-white p-6 rounded-lg shadow">
-      {courses.map((course, index) => (
-        <div key={index} className="mb-4">
-          <div className="flex justify-between items-center mb-2">
-            <span className="font-medium">{course.name}</span>
-            <span className="text-sm">{course.progress}%</span>
-          </div>
-          <div className="h-2 bg-gray-200 rounded">
-            <div
-              className="h-full bg-blue-600 rounded"
-              style={{ width: `${course.progress}%` }}
-            />
+// New CourseDialog Component
+const CourseDialog = ({ course, isOpen, onClose }) => {
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{course?.name}</DialogTitle>
+          <DialogDescription>
+            Learn more about {course?.name} and track your progress.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="mt-4">
+          <h4 className="font-semibold mb-2">Course Content:</h4>
+          <ul className="list-disc pl-5">
+            <li>Introduction to {course?.name}</li>
+            <li>Basic Concepts</li>
+            <li>Advanced Topics</li>
+            <li>Practical Applications</li>
+          </ul>
+          <div className="mt-4">
+            <h4 className="font-semibold mb-2">
+              Your Progress: {course?.progress}%
+            </h4>
+            <div className="h-2 bg-gray-200 rounded">
+              <div
+                className="h-full bg-blue-600 rounded"
+                style={{ width: `${course?.progress}%` }}
+              />
+            </div>
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-);
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 // Premium Upgrade Component
 const PremiumUpgrade = () => (
   <div className="bg-gray-900 text-white p-6 rounded-lg mt-6">
     <h3 className="text-xl font-bold mb-2">Upgrade to Premium</h3>
     <p className="mb-4">
-      Get access to exclusive features and content by upgrading to our premium plan.
+      Get access to exclusive features and content by upgrading to our premium
+      plan.
     </p>
     <button className="bg-white text-gray-900 px-4 py-2 rounded-full mt-2">
       Upgrade →
@@ -245,6 +319,13 @@ const Dashboard = () => {
     { name: "Arabic", progress: 40 },
   ]);
 
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const handleCourseClick = (course) => {
+    setSelectedCourse(course);
+  };
+
   return (
     <div className="min-h-screen flex flex-col sm:flex-row">
       <aside className="w-full sm:w-64 bg-white shadow-md">
@@ -258,13 +339,32 @@ const Dashboard = () => {
         <Progress courses={courses} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="sm:col-span-2">
-            <Courses courses={courses} />
+            <Courses courses={courses} onCourseClick={handleCourseClick} />
           </div>
           <div>
+            <Card>
+              <CardHeader>
+                <h3 className="text-lg font-semibold">Calendar</h3>
+              </CardHeader>
+              <CardContent>
+                <Calendar
+                  mode="single"
+                  selected={selectedDate}
+                  onSelect={setSelectedDate}
+                  className="rounded-md border"
+                />
+              </CardContent>
+            </Card>
             <PremiumUpgrade />
           </div>
         </div>
       </main>
+
+      <CourseDialog
+        course={selectedCourse}
+        isOpen={!!selectedCourse}
+        onClose={() => setSelectedCourse(null)}
+      />
     </div>
   );
 };
