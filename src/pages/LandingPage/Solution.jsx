@@ -14,7 +14,7 @@ const Solution = () => {
 
   return (
     <section
-      className="container max-w-screen-lg mx-auto px-4 py-10 lg:py-16"
+      className="container max-w-screen-lg mx-auto px-4 py-10 lg:py-16 overflow-hidden"
       data-aos="zoon-in"
       data-aos-delay="1000"
     >

@@ -5,7 +5,7 @@ import About from "../../assets/about (2).png";
 function AboutUs() {
   return (
     <section
-      className="container max-w-screen-lg mx-auto px-4 py-10 lg:py-16 flex flex-col-reverse lg:flex-row items-center"
+      className="container max-w-screen-lg mx-auto px-4 py-10 lg:py-16 flex flex-col-reverse lg:flex-row items-center overflow-hidden"
       id="about"
     >
       <div

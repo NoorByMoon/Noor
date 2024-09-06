@@ -33,11 +33,11 @@ const LandingPage = () => {
       <main>
         <HeroSection handleOrderPopup={handleOrderPopup} />
         <AboutUs handleOrderPopup={handleOrderPopup} />
-        <Features handleOrderPopup={handleOrderPopup} />
-        <Solution handleOrderPopup={handleOrderPopup} />
-        <Team handleOrderPopup={handleOrderPopup} />
-        <Waitlist handleOrderPopup={handleOrderPopup} />
-        <Footer />
+          <Features handleOrderPopup={handleOrderPopup} />
+          <Solution handleOrderPopup={handleOrderPopup} />
+          <Team handleOrderPopup={handleOrderPopup} />
+          <Waitlist handleOrderPopup={handleOrderPopup} />
+          <Footer />
       </main>
     </div>
   );

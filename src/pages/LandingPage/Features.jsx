@@ -16,7 +16,7 @@ function Features() {
 
   return (
     <section
-      className="container mx-auto max-w-screen-lg px-4 py-16"
+      className="container mx-auto max-w-screen-lg px-4 py-16 overflow-hidden"
       id="features"
       data-aos="fade-up"
       data-aos-delay="1000"

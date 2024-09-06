@@ -7,7 +7,7 @@ function HeroSection() {
     <section
       data-aos="fade-up"
       data-aos-delay="400"
-      className="container mx-auto max-w-screen-lg px-4 py-10 lg:py-16 flex flex-col-reverse lg:flex-row items-center"
+      className="container mx-auto max-w-screen-lg px-4 py-10 lg:py-16 flex flex-col-reverse lg:flex-row items-center overflow-hidden"
     >
       <div className="w-full lg:w-1/2">
         <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
