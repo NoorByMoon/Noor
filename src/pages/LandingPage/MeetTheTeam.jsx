@@ -13,7 +13,7 @@ const MeetTheTeam = ({ image, name, role, link }) => {
         />
       </div>
       <div className="text-center space-y-3 text-[#316097]">
-        <h1 className="font-semibold text-lg uppercase">{name}</h1>
+        <h1 className="font-semibold text-lg ">{name}</h1>
         <h6 className="text-base text-red-400">{role}</h6>
         <div className="flex justify-center items-center gap-4">
           <IoLogoLinkedin color="#316097" size={20} />

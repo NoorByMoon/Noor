@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import logo from "../assets/logo (2).png";
 import auth from "../assets/auth.svg";
@@ -9,7 +10,10 @@ function RegistrationForm() {
     <div className="min-h-screen bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-5xl flex flex-col lg:flex-row">
         <div className="lg:w-1/2 p-8 flex flex-col items-center lg:items-start">
-          <img src={logo} alt="Logo" className="h-8 self-start mb-8" />
+          <Link to="/" className="">
+            <img src={logo} alt="Logo" className="h-8 self-start mb-8 " />
+          </Link>
+
           <img
             src={auth}
             alt="Authentication illustration"
@@ -80,13 +84,23 @@ function RegistrationForm() {
               >
                 Gender
               </label>
-              <input
+              <select
+                name="text"
+                id="gender"
+                className="mt-1 block w-full px-3 py-2 bg-white border text-gray-600   border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              >
+                <option value="gender">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              {/* <input
                 type="text"
                 id="gender"
                 placeholder="Gender"
                 className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
             focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-              />
+              /> */}
             </div>
 
             <div>
@@ -138,14 +152,14 @@ function RegistrationForm() {
 
             <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none  "
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none  "
             >
               Create Account
             </button>
 
             <button
               type="button"
-              className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none  focus:ring-indigo-500"
+              className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-full shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none  focus:ring-indigo-500"
             >
               <FcGoogle className="mr-2 h-5 w-5" />
               Continue with Google

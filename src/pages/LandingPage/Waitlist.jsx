@@ -18,9 +18,20 @@ const Waitlist = () => {
               dolores deserunt numquam eos a sunt accusantium tempore sit
               ratione odio.
             </p>
-            <button className="mt-6 px-6 py-2 text-lg bg-[#FFB300] text-white rounded-full shadow-md hover:bg-[#FF9900] transition-colors duration-300">
-              Get started
-            </button>
+            <form action="">
+              <div className="flex gap-2 mt-5">
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="email"
+                  className=" flex-grow block px-3 py-3 bg-white border border-gray-300 rounded-full text-sm shadow-sm placeholder-gray-400
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                />
+                <button className=" px-6 py-3 text-lg bg-blue-500 text-white rounded-full shadow-md  ">
+                  Get started
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -9,27 +9,27 @@ const Team = () => {
   const Teams = [
     {
       image: image,
-      name: "Aisha Mudathir",
+      name: "AISHA MUDATHIR",
       role: "Product Manager",
     },
     {
       image: image,
-      name: "Khadijah Kolapo",
+      name: "KHADIJAH KOLAPO ",
       role: "Product Designer",
     },
     {
       image: image,
-      name: "Hind AbdulRasheed",
+      name: "HIND ABDULRASHEED",
       role: "Front-End Developer",
     },
     {
       image: image,
-      name: "Sekinat Bashir ",
+      name: "SEKINAT BASHIR ",
       role: "Front-End Developer",
     },
     {
       image: image,
-      name: "Halimah Ajani",
+      name: "HALIMAH AJANI",
       role: "FullStack Developer ",
     },
   ];

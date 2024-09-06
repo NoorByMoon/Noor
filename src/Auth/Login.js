@@ -35,14 +35,14 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center p-2 sm:p-4">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-5xl flex flex-col sm:flex-row">
+    <div className="min-h-screen bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center p-2 lg:p-4">
+      <div className="bg-white rounded-lg shadow-lg w-full max-w-5xl flex flex-col lg:flex-row">
         <div className="sm:w-1/2 p-8 flex flex-col items-start ">
           <Link to="/" className="">
             <img
               src={logo}
               alt="Logo"
-              className="h-8 self-start mb-8 max-w-xs sm:max-w-full"
+              className="h-8 self-start mb-8 max-w-xs lg:max-w-full"
             />
           </Link>
           <img
@@ -52,7 +52,7 @@ function Login() {
           />
         </div>
         <div className="sm:w-1/2 p-5 sm:p-8 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-2 text-center sm:text-start ">
+          <h1 className="text-3xl font-bold mb-2 text-center lg:text-start ">
             MARHABAN (WELCOME)!
           </h1>
 
@@ -141,7 +141,7 @@ function Login() {
             </button>
             <button
               type="button"
-              className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-r-full rounded-l-full shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-full shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               <FcGoogle className="mr-2 h-5 w-5" />
               Continue with Google

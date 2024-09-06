@@ -68,7 +68,10 @@ function Header() {
               </a>
             </li>
             <li>
-              <Link to="/Dashboard" className="text-gray-600 hover:text-blue-600">
+              <Link
+                to="/Dashboard"
+                className="text-gray-600 hover:text-blue-600"
+              >
                 Dashboard
               </Link>
             </li>
@@ -82,7 +85,7 @@ function Header() {
 
       {/* Dropdown menu card */}
       {menuOpen && (
-        <div className="md:hidden absolute top-16 right-0 mx-4 bg-blue-100 shadow-lg rounded-lg p-4 w-36">
+        <div className="md:hidden absolute top-16 right-0 mx-4 bg-blue-100 shadow-lg rounded-lg p-4 w-36 z-50">
           <nav>
             <ul className="flex flex-col space-y-4">
               <li>
@@ -91,7 +94,10 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a href="#features" className="text-gray-600 hover:text-blue-600">
+                <a
+                  href="#features"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Features
                 </a>
               </li>
@@ -102,7 +108,7 @@ function Header() {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation('/Dashboard')}
+                  onClick={() => handleNavigation("/Dashboard")}
                   className="text-gray-600 hover:text-blue-600"
                 >
                   Dashboard
@@ -110,7 +116,7 @@ function Header() {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation('/Sign-Up')}
+                  onClick={() => handleNavigation("/Sign-Up")}
                   className="hidden md:block text-gray-600 hover:text-blue-600"
                 >
                   Sign Up
