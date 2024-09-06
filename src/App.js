@@ -7,7 +7,6 @@ import ResetPassword from "./Auth/ResetPassword";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import LandingPage from "./pages/LandingPage/LandingPage";
 
-
 function App() {
   return (
     <BrowserRouter className="App">
@@ -19,7 +18,6 @@ function App() {
         <Route path="/Sign-Up" element={<RegistrationForm />} />
         <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
-
     </BrowserRouter>
   );
 }
